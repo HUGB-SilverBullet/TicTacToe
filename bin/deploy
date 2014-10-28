@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -f ~/TicTacToe/build/libs/TicTacToe.jar ~/TicTacToe/tmp
-cd ~/TicTacToe/tmp
+cp -f ~/TicTacToe/build/libs/TicTacToe.jar ~/TicTacToe/temp
+cd ~/TicTacToe/temp
 
 java -jar TicTacToe.jar
