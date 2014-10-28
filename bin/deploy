@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp -f ~/hugb_hello_world/build/libs/hugb_hello_world.jar ~/tmp
+cd ~/tmp
+java -jar hugb_hello_world.jar
