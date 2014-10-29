@@ -3,7 +3,7 @@ TicTacToe
 
 **Late term assignment** 
 
-*Hugbúnaðarfræði*
+***Hugbúnaðarfræði***
 
 
 Halldóra Jóhannsdóttir
