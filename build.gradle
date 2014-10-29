@@ -11,7 +11,7 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = "Library"
+mainClassName = "TicTacToe"
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -34,6 +34,6 @@ dependencies {
 
 jar{
 	manifest{
-		attributes("Main-Class": "Library")
+		attributes("Main-Class": "TicTacToe")
 	}
 }
