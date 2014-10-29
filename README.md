@@ -1,22 +1,18 @@
 TicTacToe
 =========
 
-Late term assignment 
+#2 Late term assignment 
 
+#4 Hugbúnaðarfræði
 
-Hugbúnaðarfræði
 
 Halldóra Jóhannsdóttir
 
-
 Hjalti Leifsson
-
 
 Sigmar Þór Hávarðarson
 
-
 Tryggvi Þór Tryggvason
-
 
 Þórður Björn Ágústsson
 
