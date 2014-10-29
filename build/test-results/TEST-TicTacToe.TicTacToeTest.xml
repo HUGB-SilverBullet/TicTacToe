@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TicTacToe.TicTacToeTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2014-10-29T22:40:15" hostname="i-a4933858" time="0.003">
+<testsuite name="TicTacToe.TicTacToeTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2014-10-29T22:45:46" hostname="i-a4933858" time="0.006">
   <properties/>
-  <testcase name="testBoard" classname="TicTacToe.TicTacToeTest" time="0.003">
+  <testcase name="testBoard" classname="TicTacToe.TicTacToeTest" time="0.006">
     <failure message="java.lang.NullPointerException" type="java.lang.NullPointerException">java.lang.NullPointerException
 	at TicTacToe.TicTacToeTest.testBoard(TicTacToeTest.java:14)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
