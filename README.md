@@ -1,9 +1,9 @@
 TicTacToe
 =========
 
-#2 Late term assignment 
+**Late term assignment** 
 
-#4 Hugbúnaðarfræði
+*Hugbúnaðarfræði*
 
 
 Halldóra Jóhannsdóttir
