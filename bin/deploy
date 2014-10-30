@@ -3,4 +3,4 @@
 sudo cp -f ~/TicTacToe/build/libs/TicTacToe.jar /tmp
 cd /tmp
 
-java -cp TicTacToe.jar is.ru.tictactoe.TicTacToe.TicTacToe
+java -cp TicTacToe.jar is.ru.tictactoe.TicTacToe
