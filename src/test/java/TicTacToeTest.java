@@ -50,6 +50,14 @@ public class TicTacToeTest{
                 test.playerMove(0,1);
                 test.playerMove(0,2);
 		assertEquals(true, test.checkRows());
-
+	}
+	@Test
+	public void testCheckColumns()
+	{
+		TicTacToe test = new TicTacToe();
+		test.playerMove(0,0);
+                test.playerMove(1,0);
+                test.playerMove(2,0);
+		assertEquals(true, test.checkColumns());
 	}
 }
