@@ -1,4 +1,4 @@
-
+package is.ru.tictactoe;
 
 import spark.*;
 import static spark.Spark.*;
