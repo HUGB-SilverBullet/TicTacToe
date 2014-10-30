@@ -66,4 +66,10 @@ public class TicTacToeTest{
 		TicTacToe test = new TicTacToe();
 		assertEquals(false, test.checkForWin());
 	}
+	@Test
+	public void testIsGameOver()
+	{
+		TicTacToe test = new TicTacToe();
+		assertEquals(false, test.isGameOver());
+	}
 }
