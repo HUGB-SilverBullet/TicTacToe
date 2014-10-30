@@ -18,4 +18,10 @@ public class TicTacToeTest{
 		test.changePlayer();
 		assertEquals('o',test.currPlayer);
 	}
+	@Test
+	public void testIsBoardFull()
+	{
+		TicTacToe test = new TicTacToe();
+		assertEquals(false,test.isBoardFull());
+	}
 }

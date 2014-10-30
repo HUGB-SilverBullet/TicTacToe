@@ -2,6 +2,6 @@
 
 ./bin/clean
 ./bin/compile
-./bin/package
-./bin/deploy
+#./bin/package
+#./bin/deploy
 ./bin/unit_test
