@@ -17,7 +17,6 @@ public class TicTacToeWeb implements SparkApplication {
 	}
 	
 	public void init() {
-	
-		final TicTacToe TTT = new TicTacToe();
+		
 	}
 }
