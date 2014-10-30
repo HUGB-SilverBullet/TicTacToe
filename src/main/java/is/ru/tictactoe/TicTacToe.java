@@ -1,5 +1,7 @@
 package is.ru.tictactoe.TicTacToe;
 
+import java.util.Scanner;
+
 public class TicTacToe{
 	public static char[][] board;
 	public char currPlayer;
@@ -72,4 +74,34 @@ public class TicTacToe{
 	public boolean isGameOver(){
 		return (isBoardFull() || checkForWin());
 	}
+	public void print(){
+                for(int i = 0; i < 3; i++){
+                        for(int j = 0; j <3; j++){
+                                System.out.print(board[i][j]);
+                        }
+                        System.out.println();
+                }
+        }
+        public int getInt(Scanner in){
+                int z = in.nextInt();
+                return z;
+        }
+        public static void main(String[] args){
+                TicTacToe tic = new TicTacToe();
+                int x = 0;
+                int y = 0;
+                Scanner in = new Scanner(System.in);
+                while(!tic.isGameOver()){
+                        x = tic.getInt(in);
+                        y = tic.getInt(in);
+                        while(!tic.playerMove(x, y)){
+                                System.out.println("Reyndu aftur");
+                                x = tic.getInt(in);
+                                y = tic.getInt(in);
+                        }
+                        tic.print();
+                        tic.changePlayer();
+                }
+        }
+
 }
