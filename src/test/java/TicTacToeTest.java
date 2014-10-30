@@ -24,4 +24,11 @@ public class TicTacToeTest{
 		TicTacToe test = new TicTacToe();
 		assertEquals(false,test.isBoardFull());
 	}
+	@Test
+	public void testPlayerMove()
+	{
+		TicTacToe test = new TicTacToe();
+		test.playerMove(1,1);
+		assertEquals('x',test.board[1][1]);
+	}
 }
