@@ -58,4 +58,12 @@ public class TicTacToe{
 		}
 		return false;
 	}
+	public boolean checkColumns(){
+		for(int i = 0; i < 3; i++)
+		{
+			if(board[0][i] == board[1][i] && board[1][i] == board[2][i] && board[0][i] != '-')
+				return true;
+		}
+		return false;
+	}
 }
