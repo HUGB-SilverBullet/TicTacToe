@@ -60,4 +60,10 @@ public class TicTacToeTest{
                 test.playerMove(2,0);
 		assertEquals(true, test.checkColumns());
 	}
+	@Test
+	public void testCheckForWin()
+	{
+		TicTacToe test = new TicTacToe();
+		assertEquals(false, test.checkForWin());
+	}
 }
