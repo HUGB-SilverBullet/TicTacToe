@@ -31,5 +31,6 @@ public class TicTacToeTest{
 		test.playerMove(1,1);
 		assertEquals('x',test.board[1][1]);
 		assertEquals(false, test.playerMove(1,1));
+		assertEquals(false, test.playerMove(3,3));
 	}
 }
