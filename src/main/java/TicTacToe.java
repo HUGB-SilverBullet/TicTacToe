@@ -2,10 +2,11 @@ package TicTacToe;
 
 public class TicTacToe{
 	public static char[][] board;
-
+	public char currPlayer;
 
 	public TicTacToe(){
 		board = new char[3][3];
+		currPlayer = 'x';
 	}
         public void resetBoard(){
                 for(int i = 0; i < 3; i++){
@@ -14,6 +15,13 @@ public class TicTacToe{
                         }
                 }
         }
+	public void changePlayer(){
+		if(currPlayer == 'x'){
+			currPlayer = 'o';
+		}
+		else
+		currPlayer = 'x';
+	}
 
 
 
