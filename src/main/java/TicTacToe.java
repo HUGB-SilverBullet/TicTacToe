@@ -7,6 +7,7 @@ public class TicTacToe{
 	public TicTacToe(){
 		board = new char[3][3];
 		currPlayer = 'x';
+		resetBoard();
 	}
         public void resetBoard(){
                 for(int i = 0; i < 3; i++){
@@ -22,7 +23,16 @@ public class TicTacToe{
 		else
 		currPlayer = 'x';
 	}
-
+	public boolean isBoardFull(){
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 3; j++){
+				if(board[i][j] == ' '){
+					return false;
+				}
+			}
+		}
+		return true;
+	}
 
 
 
