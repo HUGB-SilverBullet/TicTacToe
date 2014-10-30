@@ -1,4 +1,4 @@
-package TicTacToe;
+package is.ru.tictactoe.TicTacToe;
 
 public class TicTacToe{
 	public static char[][] board;
