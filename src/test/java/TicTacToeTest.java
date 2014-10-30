@@ -9,9 +9,11 @@ public class TicTacToeTest{
 		org.junit.runner.JUnitCore.main("TicTacToe.TicTacToeTest");
 	}
 	@Test
-	public void testBoard()
+	public void testResetBoard()
 	{
-		assertEquals(' ', TicTacToe.board[1][1]);
+		TicTacToe test = new TicTacToe();
+		test.resetBoard();
+		assertEquals(' ', test.board[1][1]);
 	}
 
 }
