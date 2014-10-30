@@ -33,8 +33,12 @@ public class TicTacToe{
 		}
 		return true;
 	}
-	public void playerMove(int x, int y ){
-		board[x][y] = currPlayer;
+	public boolean playerMove(int x, int y ){
+		if(board[x][y] == ' '){
+			board[x][y] = currPlayer;
+			return true;
+		}
+		return false;
 	}
 
 
