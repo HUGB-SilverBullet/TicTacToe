@@ -103,9 +103,14 @@ public class TicTacToe{
                         tic.changePlayer();
                 }
 		tic.changePlayer();
-		System.out.print("Til hamingju ");
-		System.out.print(tic.currPlayer);
-		System.out.println(", þú vannst!");
+		if(tic.checkForWin()){
+			System.out.print("Til hamingju ");
+			System.out.print(tic.currPlayer);
+			System.out.println(", þú vannst!");
+		}
+		else if(tic.isBoardFull()){
+			System.out.println("Jafntefli");
+		}
         }
 
 }
