@@ -69,4 +69,7 @@ public class TicTacToe{
 	public boolean checkForWin(){
 		return (checkDiagonal() || checkRows() || checkColumns());
 	}
+	public boolean isGameOver(){
+		return (isBoardFull() || checkForWin());
+	}
 }
