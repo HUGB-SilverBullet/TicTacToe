@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TicTacToe.TicTacToeTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2014-10-30T02:46:37" hostname="i-a4933858" time="0.012">
+  <properties/>
+  <testcase name="testIsBoardFull" classname="TicTacToe.TicTacToeTest" time="0.003"/>
+  <testcase name="testCheckDiagonal" classname="TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testChangePlayer" classname="TicTacToe.TicTacToeTest" time="0.001"/>
+  <testcase name="testCheckRows" classname="TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testPlayerMove" classname="TicTacToe.TicTacToeTest" time="0.0"/>
+  <testcase name="testResetBoard" classname="TicTacToe.TicTacToeTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

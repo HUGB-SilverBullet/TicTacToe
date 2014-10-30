@@ -16,13 +16,13 @@ public class TicTacToeTest{
 	{
 		TicTacToe test = new TicTacToe();
 		test.changePlayer();
-		assertEquals('o',test.currPlayer);
+		assertEquals('o', test.currPlayer);
 	}
 	@Test
 	public void testIsBoardFull()
 	{
 		TicTacToe test = new TicTacToe();
-		assertEquals(false,test.isBoardFull());
+		assertEquals(false, test.isBoardFull());
 	}
 	@Test
 	public void testPlayerMove()
@@ -49,7 +49,7 @@ public class TicTacToeTest{
 		test.playerMove(0,0);
                 test.playerMove(0,1);
                 test.playerMove(0,2);
-		assertEquals(true,test.checkRows();
+		assertEquals(true, test.checkRows());
 
 	}
 }
