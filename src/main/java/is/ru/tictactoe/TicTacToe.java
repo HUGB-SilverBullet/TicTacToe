@@ -1,4 +1,3 @@
-package is.ru.tictactoe.TicTacToe;
 
 import java.util.Scanner;
 
