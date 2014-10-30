@@ -41,4 +41,5 @@ public class TicTacToeTest{
 		test.playerMove(1,1);
 		test.playerMove(2,2);
 		assertEquals(true, test.checkDiagonal());
+	}
 }
