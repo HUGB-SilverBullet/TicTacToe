@@ -1,7 +1,8 @@
 package is.ru.tictactoe;
 
 import java.util.Scanner;
-
+import static spark.Spark.*;
+import spark.*;
 public class TicTacToe{
 	public static char[][] board;
 	public char currPlayer;
@@ -87,6 +88,13 @@ public class TicTacToe{
                 return z;
         }
         public static void main(String[] args){
+	get(new Route("/hello") {
+            @Override
+            public Object handle(Request request, Response response) {
+                return "Hello Spark MVC Framework!";
+            }
+        });
+	/*
                 TicTacToe tic = new TicTacToe();
                 int x = 0;
                 int y = 0;
@@ -111,6 +119,7 @@ public class TicTacToe{
 		else if(tic.isBoardFull()){
 			System.out.println("Jafntefli");
 		}
+	*/
         }
 
 }
