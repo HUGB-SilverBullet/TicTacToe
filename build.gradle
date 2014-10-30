@@ -12,12 +12,6 @@ dependencies {
     testCompile 'junit:junit:4.11'
 	
 	compile 'com.sparkjava:spark-core:1.1.1'
-	
-    seleniumCompile 'junit:junit:4.11'
-    seleniumCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
-
-    seleniumXvfbCompile 'junit:junit:4.11'
-    seleniumXvfbCompile 'org.seleniumhq.selenium:selenium-java:2.39.0'
 }
 
 	mainClassName = "is.ru.tictactoe.TicTacToe"

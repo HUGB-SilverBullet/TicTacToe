@@ -16,12 +16,8 @@ public class TicTacToeWeb implements SparkApplication {
 		TicTacToeWeb.init();
 	}
 	
-	public void init(){
+	public void init() {
 	
 		final TicTacToe TTT = new TicTacToe();
-
-		post(new Route("/play"){
-			
-		}
 	}
 }
