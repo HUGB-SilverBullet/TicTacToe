@@ -33,4 +33,12 @@ public class TicTacToeTest{
 		assertEquals(false, test.playerMove(1,1));
 		assertEquals(false, test.playerMove(3,3));
 	}
+	@Test
+	public void testCheckDiagonal()
+	{
+		TicTacToe test = new TicTacToe();
+		test.playerMove(0,0);
+		test.playerMove(1,1);
+		test.playerMove(2,2);
+		assertEquals(true, test.checkDiagonal());
 }
