@@ -68,11 +68,19 @@ public class TicTacToeWeb implements SparkApplication {
                             "            </table>");
                     if(game.isBoardFull() && !game.checkForWin()){
                         game.resetBoard();
+                        tableBoard.append(" <div\" class=\"alert alert-info\">" +
+                                            "Game over! It's a draw! " +
+                                            "Input another move to start a new game!" +
+                                            "</div>");
                         return tableBoard.toString() + "The game is a draw! Start over!";
                     }
                     if(game.checkForWin()){
                         game.resetBoard();
-                        return tableBoard.toString() + "Game over! " + game.currPlayer + " won!";
+                        tableBoard.append(" <div\" class=\"alert alert-info\">" +
+                                            "Game over!" + game.currPlayer + " won! " +
+                                            "Input another move to start a new game!" +
+                                            "</div>");
+                        return tableBoard.toString();
                     }
 
                     game.changePlayer();
