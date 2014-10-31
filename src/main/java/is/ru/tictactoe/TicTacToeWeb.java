@@ -4,6 +4,8 @@ import spark.*;
 import static spark.Spark.*;
 import spark.servlet.SparkApplication;
 
+import javax.print.DocFlavor;
+
 public class TicTacToeWeb implements SparkApplication {
 
     public static void main(String[] args) {
@@ -20,13 +22,8 @@ public class TicTacToeWeb implements SparkApplication {
 
         final TicTacToe game = new TicTacToe();
 
-        get(new Route("/"){
-            @Override
-            public Object handle(Request request, Response response) {
 
-                return null;
-            }
-        });
+
         post(new Route("/reset") {
             @Override
             public Object handle(Request request, Response response) {
@@ -42,9 +39,33 @@ public class TicTacToeWeb implements SparkApplication {
                 Integer x = Integer.valueOf(request.queryParams("number1"));
                 Integer y = Integer.valueOf(request.queryParams("number2"));
                 if (game.playerMove(x, y)) {
-                    return true;
+                    response.status(200);
+
+                    StringBuilder tableBoard = new StringBuilder();
+                    tableBoard.append("<table class=\"table board\">\n" +
+                            "                <tbody>\n" +
+                            "                <tr>\n" +
+                            "                    <td id=\"c00\">"+ game.board[0][0] +"</td>\n" +
+                            "                    <td id=\"c01\">"+ game.board[0][1] +"</td>\n" +
+                            "                    <td id=\"c02\">"+ game.board[0][2] +"</td>\n" +
+                            "                </tr>\n" +
+                            "                <tr>\n" +
+                            "                    <td id=\"c10\">"+ game.board[1][0] +"</td>\n" +
+                            "                    <td id=\"c11\">"+ game.board[1][1] +"</td>\n" +
+                            "                    <td id=\"c12\">"+ game.board[1][2] +"</td>\n" +
+                            "                </tr>\n" +
+                            "                <tr>\n" +
+                            "                    <td id=\"20\">"+ game.board[2][0] +"</td>\n" +
+                            "                    <td id=\"21\">"+ game.board[2][1] +"</td>\n" +
+                            "                    <td id=\"22\">"+ game.board[2][2] +"</td>\n" +
+                            "                </tr>\n" +
+                            "                </tbody>\n" +
+                            "            </table>");
+                    game.changePlayer();
+                    return tableBoard.toString();
                 }
-                return false;
+                response.status(500);
+                return response;
             }
         });
     }
