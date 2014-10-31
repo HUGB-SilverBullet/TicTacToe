@@ -6,12 +6,17 @@
                 $.ajax({
                     type: form.attr('method'),
                     url: form.attr('action'),
-                    data: 'number1=' + number1 + '&number2=' + number2
-                }).done(function() {
-                    $('#playerMoveResult').html('Move successful').attr('class', 'alert alert-success');
-                }).fail(function() {
-                    $('#playerMoveResult').html('Error, move not submitted').attr('class', 'alert alert-danger');
-                });
+                    data: 'number1=' + number1 + '&number2=' + number2,
+                    success: function(test){
+                        $('#playerMoveResult').html('Move successful').attr('class', 'alert alert-success');
+                        $('#boardcontainer').html(test);
+                    },
+                    error: function(){
+                        $('#playerMoveResult').html('Error, move not submitted').attr('class', 'alert alert-danger');
+                    }
+                })
                 event.preventDefault();
             });
         });
+
+

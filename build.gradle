@@ -24,3 +24,4 @@ jar{
         attributes("Main-Class": "is.ru.tictactoe.TicTacToeWeb")
     }
 }
+task stage { dependsOn installApp }
