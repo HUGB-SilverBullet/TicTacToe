@@ -1,9 +1,9 @@
 package is.ru.tictactoe;
 
 import java.util.Scanner;
-import static spark.Spark.*;
-import spark.*;
+
 public class TicTacToe{
+
 	public static char[][] board;
 	public char currPlayer;
 
@@ -12,19 +12,21 @@ public class TicTacToe{
 		currPlayer = 'x';
 		resetBoard();
 	}
-        public void resetBoard(){
-                for(int i = 0; i < 3; i++){
-                        for(int j = 0; j < 3; j++){
-                                board[i][j] = ' ';
-                        }
+    public void resetBoard(){
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                board[i][j] = ' ';
                 }
         }
+    }
 	public void changePlayer(){
 		if(currPlayer == 'x'){
 			currPlayer = 'o';
 		}
-		else
-		currPlayer = 'x';
+		else{
+            currPlayer = 'x';
+        }
+
 	}
 	public boolean isBoardFull(){
 		for(int i = 0; i < 3; i++){
@@ -37,11 +39,11 @@ public class TicTacToe{
 		return true;
 	}
 	public boolean playerMove(int x, int y ){
-                if(x >=  0 && y >=  0 && x < 3 && y < 3){
-			if(board[x][y] == ' '){
-				board[x][y] = currPlayer;
-				return true;
-			}
+        if(x >=  0 && y >=  0 && x < 3 && y < 3){
+		    if(board[x][y] == ' '){
+		        board[x][y] = currPlayer;
+		            return true;
+		    }
 		}
 		return false;
 	}
@@ -76,24 +78,18 @@ public class TicTacToe{
 		return (isBoardFull() || checkForWin());
 	}
 	public void print(){
-                for(int i = 0; i < 3; i++){
-                        for(int j = 0; j <3; j++){
-                                System.out.print(board[i][j]);
-                        }
-                        System.out.println();
-                }
-        }
-        public int getInt(Scanner in){
-                int z = in.nextInt();
-                return z;
-        }
-        public static void main(String[] args){
-	get(new Route("/hello") {
-            @Override
-            public Object handle(Request request, Response response) {
-                return "Hello Spark MVC Framework!";
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j <3; j++){
+                System.out.print(board[i][j]);
             }
-        });
+            System.out.println();
+        }
+    }
+
+    public int getInt(Scanner in){
+        int z = in.nextInt();
+            return z;
+    }
 	/*
                 TicTacToe tic = new TicTacToe();
                 int x = 0;
@@ -120,6 +116,4 @@ public class TicTacToe{
 			System.out.println("Jafntefli");
 		}
 	*/
-        }
-
 }

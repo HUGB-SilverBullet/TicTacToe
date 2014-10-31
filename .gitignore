@@ -1,5 +1,0 @@
-#object to ignore
-.gradle/
-build/
-*.swp
-*.save
