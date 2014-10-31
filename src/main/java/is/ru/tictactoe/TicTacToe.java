@@ -42,6 +42,7 @@ public class TicTacToe{
         if(x >=  0 && y >=  0 && x < 3 && y < 3){
 		    if(board[x][y] == ' '){
 		        board[x][y] = currPlayer;
+                changePlayer();
 		            return true;
 		    }
 		}

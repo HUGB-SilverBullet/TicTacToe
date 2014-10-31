@@ -46,12 +46,36 @@
     </head>
 
     <body>
+    <div id="playerMoveResult" class="alert alert-info"> Make a move!</div>
+    <form method="post" action="/playerMove" class="form-inline" role="form" id="playerMoveForm">
+        <div class="form group">
+            <input type="text" name="number1" id="number1" placeholder="X coordinate">
+            <input type="text" name="number2" id="number2" placeholder="Y coordinate">
+        </div>
+        <button type="submit">Submit move</button>
+    </form>
 
         <!-- Load jquery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
         <script>
-
+        $(document).ready(function() {
+            var form = $('#playerMoveForm');
+            form.submit(function( event ) {
+                var number1 = $("#number1").val();
+                var number2 = $("#number2").val();
+                $.ajax({
+                    type: form.attr('method'),
+                    url: form.attr('action'),
+                    data: 'number1=' + number1 + '&number2=' + number2
+                }).done(function() {
+                    $('#playerMoveResult').html('Move successful').attr('class', 'alert alert-success');
+                }).fail(function() {
+                    $('#playerMoveResult').html('Error, move not submitted').attr('class', 'alert alert-danger');
+                });
+                event.preventDefault();
+            });
+        });
         </script>
     </body>
 </html>
