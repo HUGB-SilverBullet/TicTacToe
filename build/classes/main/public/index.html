@@ -11,41 +11,47 @@
     </head>
 
     <body>
+<div class="container">
+    <h1>Welcome to TicTacToe!</h1>
+    <hr>
+    <div id="playerMoveResult" class="alert alert-info"> Make a move!</div>
 
-        <h1>Welcome to TicTacToe!</h1>
+    <div id="boardcontainer">
+        <table class="table board table-bordered">
+            <tbody>
+            <tr>
+                <td id="c00" class="cell"> </td>
+                <td id="c01" class="cell"> </td>
+                <td id="c02" class="cell"> </td>
+            </tr>
+            <tr>
+                <td id="c10" class="cell"> </td>
+                <td id="c11" class="cell"> </td>
+                <td id="c12" class="cell"> </td>
+            </tr>
+            <tr>
+                <td id="20" class="cell"> </td>
+                <td id="21" class="cell"> </td>
+                <td id="22" class="cell"> </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <div id="playerMoveResult" class="alert alert-info"> Make a move!</div>
 
-        <div id="boardcontainer">
-            <table class="table board table-bordered">
-                <tbody>
-                <tr>
-                    <td id="c00"></td>
-                    <td id="c01"></td>
-                    <td id="c02"></td>
-                </tr>
-                <tr>
-                    <td id="c10"></td>
-                    <td id="c11"></td>
-                    <td id="c12"></td>
-                </tr>
-                <tr>
-                    <td id="20"></td>
-                    <td id="21"></td>
-                    <td id="22"></td>
-                </tr>
-                </tbody>
-            </table>
+    <form method="post" action="/playerMove" role="form" id="playerMoveForm">
+        <div class="form-group">
+            <label for="number1">Input X coordinate here</label>
+            <input type="text" name="number1" id="number1" class="form-control" placeholder="X coordinate">
         </div>
+        <div class="form-group">
+            <label for="number2">Input Y coordinate here</label>
+            <input type="text" name="number2" id="number2" class="form-control" placeholder="Y coordinate">
+        </div>
+        <button type="submit" class="btn btn-default">Submit move</button>
+    </form>
 
-
-        <form method="post" action="/playerMove" class="form-inline" role="form" id="playerMoveForm">
-            <div class="form group">
-                <input type="text" name="number1" id="number1" placeholder="X coordinate">
-                <input type="text" name="number2" id="number2" placeholder="Y coordinate">
-            </div>
-            <button type="submit">Submit move</button>
-        </form>
+</div>
 
     </body>
 </html>

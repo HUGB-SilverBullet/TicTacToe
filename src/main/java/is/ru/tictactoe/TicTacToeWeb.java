@@ -50,19 +50,19 @@ public class TicTacToeWeb implements SparkApplication {
                     tableBoard.append("<table class=\"table board table-bordered\" >\n" +
                             "                <tbody>\n" +
                             "                <tr>\n" +
-                            "                    <td id=\"c00\">"+ game.board[0][0] +"</td>\n" +
-                            "                    <td id=\"c01\">"+ game.board[0][1] +"</td>\n" +
-                            "                    <td id=\"c02\">"+ game.board[0][2] +"</td>\n" +
+                            "                    <td id=\"c00\" class=\"cell\">"+ game.board[0][0] +"</td>\n" +
+                            "                    <td id=\"c01\"class=\"cell\">"+ game.board[0][1] +"</td>\n" +
+                            "                    <td id=\"c02\"class=\"cell\">"+ game.board[0][2] +"</td>\n" +
                             "                </tr>\n" +
                             "                <tr>\n" +
-                            "                    <td id=\"c10\">"+ game.board[1][0] +"</td>\n" +
-                            "                    <td id=\"c11\">"+ game.board[1][1] +"</td>\n" +
-                            "                    <td id=\"c12\">"+ game.board[1][2] +"</td>\n" +
+                            "                    <td id=\"c10\"class=\"cell\">"+ game.board[1][0] +"</td>\n" +
+                            "                    <td id=\"c11\"class=\"cell\">"+ game.board[1][1] +"</td>\n" +
+                            "                    <td id=\"c12\"class=\"cell\">"+ game.board[1][2] +"</td>\n" +
                             "                </tr>\n" +
                             "                <tr>\n" +
-                            "                    <td id=\"20\">"+ game.board[2][0] +"</td>\n" +
-                            "                    <td id=\"21\">"+ game.board[2][1] +"</td>\n" +
-                            "                    <td id=\"22\">"+ game.board[2][2] +"</td>\n" +
+                            "                    <td id=\"20\"class=\"cell\">"+ game.board[2][0] +"</td>\n" +
+                            "                    <td id=\"21\"class=\"cell\">"+ game.board[2][1] +"</td>\n" +
+                            "                    <td id=\"22\"class=\"cell\">"+ game.board[2][2] +"</td>\n" +
                             "                </tr>\n" +
                             "                </tbody>\n" +
                             "            </table>");
