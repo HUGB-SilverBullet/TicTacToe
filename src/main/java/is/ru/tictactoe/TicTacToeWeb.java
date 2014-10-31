@@ -38,11 +38,16 @@ public class TicTacToeWeb implements SparkApplication {
             public Object handle(Request request, Response response) {
                 Integer x = Integer.valueOf(request.queryParams("number1"));
                 Integer y = Integer.valueOf(request.queryParams("number2"));
+
+                if(game.isGameOver()){
+                    return "The game is over! Reset the game to keep playing!";
+                }
+
                 if (game.playerMove(x, y)) {
                     response.status(200);
 
                     StringBuilder tableBoard = new StringBuilder();
-                    tableBoard.append("<table class=\"table board\">\n" +
+                    tableBoard.append("<table class=\"table board table-bordered\" >\n" +
                             "                <tbody>\n" +
                             "                <tr>\n" +
                             "                    <td id=\"c00\">"+ game.board[0][0] +"</td>\n" +
@@ -61,6 +66,15 @@ public class TicTacToeWeb implements SparkApplication {
                             "                </tr>\n" +
                             "                </tbody>\n" +
                             "            </table>");
+                    if(game.isBoardFull() && !game.checkForWin()){
+                        game.resetBoard();
+                        return tableBoard.toString() + "The game is a draw! Start over!";
+                    }
+                    if(game.checkForWin()){
+                        game.resetBoard();
+                        return tableBoard.toString() + "Game over! " + game.currPlayer + " won!";
+                    }
+
                     game.changePlayer();
                     return tableBoard.toString();
                 }
