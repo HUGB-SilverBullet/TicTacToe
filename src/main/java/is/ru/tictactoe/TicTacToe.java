@@ -85,12 +85,12 @@ public class TicTacToe{
             System.out.println();
         }
     }
-
+/*
     public int getInt(Scanner in){
         int z = in.nextInt();
             return z;
     }
-	/*
+
                 TicTacToe tic = new TicTacToe();
                 int x = 0;
                 int y = 0;

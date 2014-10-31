@@ -20,6 +20,13 @@ public class TicTacToeWeb implements SparkApplication {
 
         final TicTacToe game = new TicTacToe();
 
+        get(new Route("/"){
+            @Override
+            public Object handle(Request request, Response response) {
+
+                return null;
+            }
+        });
         post(new Route("/reset") {
             @Override
             public Object handle(Request request, Response response) {
@@ -34,7 +41,10 @@ public class TicTacToeWeb implements SparkApplication {
             public Object handle(Request request, Response response) {
                 Integer x = Integer.valueOf(request.queryParams("number1"));
                 Integer y = Integer.valueOf(request.queryParams("number2"));
-                return response;
+                if (game.playerMove(x, y)) {
+                    return true;
+                }
+                return false;
             }
         });
     }
