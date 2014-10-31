@@ -28,19 +28,6 @@ public class TicTacToeWeb implements SparkApplication {
                 html.append("<hr>");
 
                 game.resetBoard();
-
-                    for(Char i : game.) {
-                        html.append("Title: ").append(article.getTitle())
-                                .append("<br/>")
-                                .append(article.getCreatedAt())
-                                .append("<br/>")
-                                .append("Summary: ").append(article.getSummary())
-                                .append("<br/>")
-                                .append(article.getEditLink()).append(" | ").append(article.getDeleteLink())
-                                .append("</p>");
-                    }
-                }
-
                 return html.toString();
             }
         });
