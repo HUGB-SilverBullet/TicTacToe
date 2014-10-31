@@ -5,127 +5,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- load bootstrap for nicer ui -->
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-        <link rel="icon" type="image/png" href="favicon.png">
-        <style type="text/css">
-            body {
-            color:black;
-            background-color:white;
-            font-family:Tahoma,Verdana,Helvetica,Arial,sans-serif;
-            }
-            .cell {
-            background-color:white;
-            color:white;
-            font-size:2cm;
-            font-family:Courier New,Courier,monospaced;
-            font-weight:bold;
-            }
-            input.cell {
-            border:none;
-            width:2cm;
-            vertical-align:bottom;
-            }
-            td.cell {
-            border:thick black outset;
-            }
-            .board {
-            border:thin black ridge;
-            background-color:white;
-            margin-left: 9%;
-            }
-            .winstat {
-            color:black;
-            background-color:white;
-            border:none;
-            }
-            .player {
-            font-family:Courier New,Courier,monospaced;
-            font-weight:bold;
-            font-size:150%;
-            }
-        </style>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="scripts.js"></script>
     </head>
 
     <body>
 
-        <div class="container">
+        <h1>Welcome to TicTacToe!</h1>
 
-            <h1>Welcome to TicTacToe</h1>
+        <div id="playerMoveResult" class="alert alert-info"> Make a move!</div>
 
-            <form method="post" action="/index" class="form-inline" role="form">
-                <button type="submit">Play</button>
-            </form>
-
-            <hr>
-            <div id="results" class="alert alert-info">Let's try to make the gameboard appear here.</div>
-            <hr>
-
-        </div>
-
-        <!-- Load jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-        <form method="post" action="/reset" class="form-inline" role="form" id="resetform">
-            <button type="submit">Reset board!</button>
+        <form method="post" action="/playerMove" class="form-inline" role="form" id="playerMoveForm">
+            <div class="form group">
+                <input type="text" name="number1" id="number1" placeholder="X coordinate">
+                <input type="text" name="number2" id="number2" placeholder="Y coordinate">
+            </div>
+            <button type="submit">Submit move</button>
         </form>
-        <hr>
-        <div id="resetsuccess" class="alert alert-info"></div>
-        <hr>
 
-    <div>
-        <table class="board" cellspacing="6">
-            <tbody>
-            <tr>
-                <td class="cell">
-                    <input class="cell" name="c1" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c2" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c3" type="button">
-                </td>
-            </tr>
-            <tr>
-                <td class="cell">
-                    <input class="cell" name="c4" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c5" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c6" type="button">
-                </td>
-            </tr>
-            <tr>
-                <td class="cell">
-                    <input class="cell" name="c7" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c8" type="button">
-                </td>
-                <td class="cell">
-                    <input class="cell" name="c9" type="button">
-                </td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-
-        <script>
-        $(document).ready(function() {
-            var form = $('resetform');
-            form.submit(function( event ) {
-                $.ajax({
-                    type: form.attr('method'),
-                    url: form.attr('action')
-                }).done(function(reset) {
-                    $('#resetsuccess').html('Success!').attr('class', 'alert alert-success');
-                }).fail(function() {
-                    $('#resetsuccess').html('Error, could not reset...').attr('class', 'alert alert-danger');
-                });
-                event.preventDefault();
-            });
-        });
-        </script>
     </body>
 </html>
