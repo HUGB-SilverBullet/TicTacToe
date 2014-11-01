@@ -47,8 +47,8 @@ public class TicTacToeTest{
 	{
 		TicTacToe test = new TicTacToe();
 		test.playerMove(1,1);
-                test.playerMove(1,2);
-                test.playerMove(1,3);
+                test.playerMove(2,1);
+                test.playerMove(3,1);
 		assertEquals(true, test.checkRows());
 	}
 	@Test
@@ -56,8 +56,8 @@ public class TicTacToeTest{
 	{
 		TicTacToe test = new TicTacToe();
 		test.playerMove(1,1);
-                test.playerMove(2,1);
-                test.playerMove(3,1);
+                test.playerMove(1,2);
+                test.playerMove(1,3);
 		assertEquals(true, test.checkColumns());
 	}
 	@Test
