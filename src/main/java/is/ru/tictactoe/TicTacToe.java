@@ -38,10 +38,10 @@ public class TicTacToe{
 		}
 		return true;
 	}
-	public boolean playerMove(int x, int y ){
-        if(x >=  0 && y >=  0 && x < 3 && y < 3){
-		    if(board[x][y] == ' '){
-		        board[x][y] = currPlayer;
+	public boolean playerMove(int y, int x ){
+        if(x >=  1 && y >=  1 && x < 4 && y < 4){
+		    if(board[x - 1][y - 1] == ' '){
+		        board[x - 1][y - 1] = currPlayer;
 		            return true;
 		    }
 		}
