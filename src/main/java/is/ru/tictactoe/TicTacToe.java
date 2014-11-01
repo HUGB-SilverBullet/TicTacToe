@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TicTacToe{
 
-	public static char[][] board;
+	public char[][] board;
 	public char currPlayer;
 
 	public TicTacToe(){
