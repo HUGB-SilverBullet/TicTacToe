@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2014-11-02T02:31:53" hostname="i-a4933858" time="0.024">
+<testsuite name="is.ru.tictactoe.TicTacToeTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2014-11-02T02:41:54" hostname="i-a4933858" time="0.022">
   <properties/>
-  <testcase name="testIsBoardFull" classname="is.ru.tictactoe.TicTacToeTest" time="0.006"/>
-  <testcase name="testCheckForWin" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testCheckDiagonal" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testChangePlayer" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testIsGameOver" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testCheckRows" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testPlayerMove" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
-  <testcase name="testResetBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.001"/>
+  <testcase name="testIsBoardFull" classname="is.ru.tictactoe.TicTacToeTest" time="0.004"/>
+  <testcase name="testCheckForWin" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckDiagonal" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testChangePlayer" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testIsGameOver" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testCheckRows" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testPlayerMove" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
+  <testcase name="testResetBoard" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <testcase name="testCheckColumns" classname="is.ru.tictactoe.TicTacToeTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
