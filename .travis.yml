@@ -6,10 +6,6 @@ deploy:
   provider: heroku
   api_key: 842f09dc-96f9-41e7-bb04-d6360546d5e8
   app : herokutoe
-  on:
-    repo: HUGB-SilverBullet/TicTacToe
-after_script:
-- export STAGING_SERVER=http://herokutoe.herokuapp.com/
 
 notifications:
   email:
