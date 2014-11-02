@@ -1,6 +1,3 @@
 #!/bin/bash
 
-sudo cp -f ~/TicTacToe/build/libs/TicTacToe.jar /tmp
-cd /tmp
-
-java -cp TicTacToe.jar is.ru.tictactoe.TicTacToe
+git push origin master
