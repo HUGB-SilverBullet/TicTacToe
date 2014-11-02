@@ -7,10 +7,3 @@ deploy:
   api_key: 842f09dc-96f9-41e7-bb04-d6360546d5e8
   app : herokutoe
 
-notifications:
-  email:
-    recipients:
-	- hjaltil13@ru.is
-	on_success: change
-	on_failure: always
-
